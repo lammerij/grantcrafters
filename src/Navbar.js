@@ -1,42 +1,159 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll";
+// import logo from "../pics/logo.png";
 
-function NavBar() {
+const Navbar = () => {
   const [nav, setNav] = useState(false);
+
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black">
-      <h1 className="w-full text-3xl font-bold text-[#070707]">
-        GrantCrafters
-      </h1>
+    <div
+      id="navbar"
+      className="sticky top-0 z-30 text-black flex justify-between items-center h-24  mx-auto px-4 sm:px-10  bg-white"
+    >
+      <div className="flex text-center">
+        <Link
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className="flex items-center cursor-pointer "
+        >
+          Grant Crafters
+        </Link>
+      </div>
+
       <ul className="hidden md:flex">
-        <li className="p-4">Home</li>
-        <li className="p-4">About</li>
-        <li className="p-4">Projects</li>
-        <li className="p-4">Connect</li>
+        <li className="p-4 ">
+          <Link
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={handleNav}
+            className="cursor-pointer hover:text-black"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="p-4 ">
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={handleNav}
+            className="cursor-pointer hover:text-black"
+          >
+            About
+          </Link>
+        </li>
+        <li className="p-4">
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={handleNav}
+            className="cursor-pointer hover:text-black"
+          >
+            Projects
+          </Link>
+        </li>
+        <li className="p-4 ">
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={handleNav}
+            className="cursor-pointer hover:text-black"
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
-      <div onClick={handleNav} className="block md:hidden">
+
+      <div onClick={handleNav} className="block m-2 md:hidden">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
-      <ul
+
+      <div
         className={
           nav
-            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
-            : "ease-in-out duration-500 fixed left-[-100%]"
+            ? "fixed z-10 text-white left-0 top-[0px] w-[75%] h-full ease-in-out duration-500  bg-black md:hidden"
+            : "fixed left-[-100%]"
         }
       >
-        <h1 className="w-full text-3xl font-bold text-[#080808] m-4">REACT.</h1>
-        <li className="p-4 border-b border-gray-600">Home</li>
-        <li className="p-4 border-b border-gray-600">Company</li>
-        <li className="p-4 border-b border-gray-600">Resources</li>
-        <li className="p-4 border-b border-gray-600">About</li>
-        <li className="p-4">Contact</li>
-      </ul>
+        <ul>
+          <li className="p-4 pt-8 border-b  flex">
+            {/* <img src={logo} className="h-10 w-10 mr-4" alt="logo" /> */}
+          </li>
+          <li className="p-4 font-mono border-b border-white">
+            <Link
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={handleNav}
+              className="cursor-pointer"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="p-4 font-mono border-b border-white">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={handleNav}
+              className="cursor-pointer"
+            >
+              About
+            </Link>
+          </li>
+          <li className="p-4 font-mono border-b border-white">
+            <Link
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={handleNav}
+              className="cursor-pointer"
+            >
+              Projects
+            </Link>
+          </li>
+          <li className="p-4 font-mono  border-b border-white ">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={handleNav}
+              className="cursor-pointer"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;

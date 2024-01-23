@@ -1,15 +1,21 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
+import image from './quill.jpeg'
+import About from "./Pages/About";
 
 
-function App(){
-  return(
-    <div>
+function App() {
+ 
+
+  return (
+    <div style={{backgroundImage: `url(${image})` }}>
       <Navbar />
-      <Hero/>
+      <Hero />
+      <About/>
     </div>
-  )
+    
+  );
 }
 
-export default App
+export default App;
