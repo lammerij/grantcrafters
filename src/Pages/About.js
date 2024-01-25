@@ -6,12 +6,16 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="container">
-        <img src="" alt="profile pic" />
+        <img
+          src="/siteheadshot.jpg"
+          width={350}
+          height={250}
+          alt="profile pic"
+        />
         <div className="col-2">
           <h2 className="text-white">
             <span>ABOUT</span>
           </h2>
-
           <span className="line"></span>
           <div className="sm:text-center pb-8 pl-4">
             <p className="text-white text-lg">

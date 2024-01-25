@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import image from './quill.jpeg'
 import About from "./Pages/About";
+import Projects from "./Pages/Projects";
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     <div style={{backgroundImage: `url(${image})` }}>
       <Navbar />
       <Hero />
-      <About/>
+      <About />
+      <Projects/>
     </div>
     
   );
