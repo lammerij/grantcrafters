@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div
       id="navbar"
-      className="sticky top-0 z-30 text-black flex justify-between items-center h-24  mx-auto px-4 sm:px-10  bg-white"
+      className="sticky top-0 z-30 text-white flex justify-between items-center h-24  mx-auto px-4 sm:px-10  bg-black"
     >
       <div className="flex text-center">
         <Link
@@ -24,7 +24,7 @@ const Navbar = () => {
           duration={500}
           className="flex items-center cursor-pointer "
         >
-          Grant Crafters
+          <h2 className="text-lg">Grant Crafters</h2>
         </Link>
       </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
             onClick={handleNav}
-            className="cursor-pointer hover:text-black"
+            className="cursor-pointer"
           >
             Home
           </Link>
@@ -50,12 +50,12 @@ const Navbar = () => {
             offset={-100}
             duration={500}
             onClick={handleNav}
-            className="cursor-pointer hover:text-black"
+            className="cursor-pointer "
           >
             About
           </Link>
         </li>
-        <li className="p-4">
+        <li className="p-4 ">
           <Link
             to="projects"
             spy={true}
@@ -63,12 +63,12 @@ const Navbar = () => {
             offset={-100}
             duration={500}
             onClick={handleNav}
-            className="cursor-pointer hover:text-black"
+            className="cursor-pointer "
           >
             Projects
           </Link>
         </li>
-        <li className="p-4 ">
+        <li className="p-4">
           <Link
             to="contact"
             spy={true}
@@ -76,7 +76,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
             onClick={handleNav}
-            className="cursor-pointer hover:text-black"
+            className="cursor-pointer"
           >
             Contact
           </Link>
@@ -95,9 +95,7 @@ const Navbar = () => {
         }
       >
         <ul>
-          <li className="p-4 pt-8 border-b  flex">
-            {/* <img src={logo} className="h-10 w-10 mr-4" alt="logo" /> */}
-          </li>
+          <li className="p-4 pt-8 border-b  flex"></li>
           <li className="p-4 font-mono border-b border-white">
             <Link
               to="hero"

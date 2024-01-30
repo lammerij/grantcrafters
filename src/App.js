@@ -1,9 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
+import Navbar from './Navbar'
+import Hero from "./Pages/Hero";
 import image from './quill.jpeg'
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
+import Scrollup from "./Pages/Scrollup";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <About />
       <Projects/>
+      <Scrollup/>
     </div>
     
   );
